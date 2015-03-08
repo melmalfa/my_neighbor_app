@@ -1,0 +1,9 @@
+<h1>Voters</h1>
+
+<ul>
+<% @voters.each do |voter| %>
+  <li><a href="/voters/<%= voter.id %>"><%= voter.street_address %> <%= voter.apt_number %></li>
+<% end %>
+</ul>
+
+<!-- this needs to be only voters in the user's neighborhood -->

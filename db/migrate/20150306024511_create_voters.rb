@@ -10,7 +10,7 @@ class CreateVoters < ActiveRecord::Migration
       # do i need zip, if can auto calculate this by the street address?
       t.integer :zip_code, :default => 33460
       t.string :party
-      t.integer :precint
+      # t.integer :precint
       t.date :birthdate
       t.string :race
       t.string :gender

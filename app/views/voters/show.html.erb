@@ -1,0 +1,41 @@
+<h1><%= @voter.street_address %> <%= @voter.apt_number %> <%= @voter.zip_code %></h1>
+
+<div class="basic">
+  <ul>
+    <li>First Name: <%= @voter.f_name %></li>
+    <li>Last Name: <%= @voter.l_name %></li>
+    <!-- change this to Age and calculate age based on birthdate -->
+<!--     <li>Age: <#%= determine_age(@voter.birthdate) %></li> -->
+    <li>Gender: <%= @voter.gender %></li>
+    <li>Race: <%= @voter.race %></li>
+    <li>Party Affiliation: <%= @voter.party %></li>
+    <!-- this needs to be a function to automate the district -->
+    <li>Precint: </li>
+    <li>Date <%= @voter.f_name %> registered to vote: <%= @voter.reg_date %></li>
+    <li>Date that <%= @voter.f_name %> last voted: <%= @voter.last_vote_date %></li>
+    <!-- change this one -->
+
+  </ul>
+</div>
+
+<div class="canvass">Status of Canvassing:
+  <ul>
+    <li>Canvassed Yet?:<%= @voter.uncanvassed %></li>
+   <li>Decision: <%= @voter.decision %></li>
+  </ul>
+</div>
+
+<div class="contact">Contact Information:
+  <ul>
+    <li>E-Mail:<%= @voter.email %></li>
+   <li>Phone: <%= @voter.phone_number %></li>
+  </ul>
+</div>
+
+<%= link_to "Edit Voter Information", edit_voter_path(@voter) %>
+
+<%= link_to "Voter Index", voters_path %>
+
+<!-- iterate through the visits to check for visits with voter_id that matched this voter. then check if decided and if so, render decided -->
+
+

@@ -22,12 +22,16 @@ addys1701_shuff = addys1701.shuffle
 #       campaign_url:
 #       })
 
+
+
 User.create({
   f_name: "Melodie",
   l_name: "Malfa",
   email: "melmalfa@amazingvolunteer.com",
   phone_number: "561-333-9997",
-  street_address: "709 South D Street"
+  street_address: "709 South D Street",
+  password: "Malfa"
+  # password_confirmation:
   })
 
 User.create({
@@ -35,7 +39,8 @@ User.create({
   l_name: "Mack",
   email: "missmack@amazingvolunteer.com",
   phone_number: "561-337-4997",
-  street_address: "1331 N Palmway"
+  street_address: "1331 N Palmway",
+  password: "Mack"
   })
 
 User.create({
@@ -43,7 +48,8 @@ User.create({
   l_name: "Cash",
   email: "b.cash@amazingvolunteer.com",
   phone_number: "561-373-9987",
-  street_address: "1701 North D Street"
+  street_address: "1701 North D Street",
+  password: "Cash"
   })
 
 15.times do
