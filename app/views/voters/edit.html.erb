@@ -1,1 +1,33 @@
-edit.html.erb
+<div class="address">
+<h1><%= @voter.street_address %> <%= @voter.apt_number %> <%= @voter.zip_code %></h1>
+</div>
+
+<div class="basic">
+  <ul>
+    <li>First Name: <%= @voter.f_name %></li>
+    <li>Last Name: <%= @voter.l_name %></li>
+  </ul>
+</div>
+
+<%= form_for @voter do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.label :phone_number %>
+  <%= f.text_field :phone_number %>
+  <%= f.submit 'Update Contact Info' %>
+<% end %>
+
+<!-- make notes field very big and make vote decision a checkbox with three choices -->
+<%= form_for [@voter, @visit] do |f| %>
+  <%= f.label :vote_decision %>
+  <%= f.text_field :vote_decision %>
+  <%= f.label :notes %>
+  <%= f.text_field :notes %>
+  <%= f.submit 'Submit Visit Info' %>
+<% end %>
+
+
+
+<%= link_to "Voter Information", voter_path(@voter) %>
+
+<%= link_to "Voter Index", voters_path %>

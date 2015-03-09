@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
   before_action :authorize, except: [:create, :new]
 
-  include LocationHelper
-
   def show
     @user = User.find(params[:id])
   end

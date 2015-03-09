@@ -11,18 +11,6 @@ addys1331_shuff = addys1331.shuffle
 addys1701 = ['1715 N D St', '1722 N D St', '1830 N D St', '1514 N D St', '1502 N D St', '1414 N D St', '1402 N D St', '1231 N D St', '1025 N B St', '1222 N D St', '1213 N B St', '1225 N B St', '1219 N E St', '1223 N E St', '1202 N E St']
 addys1701_shuff = addys1701.shuffle
 
-# Campaign.create({
-#       name:
-#       election_day:
-#       candidate_or_issue:
-#       slogan:
-#       start_date:
-#       end_date:
-#       volunteer_coordinator:
-#       campaign_url:
-#       })
-
-
 
 User.create({
   f_name: "Melodie",

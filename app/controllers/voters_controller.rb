@@ -1,5 +1,4 @@
 class VotersController < ApplicationController
-  include LocationHelper
 
   def index
     @voters = Voter.all
@@ -16,10 +15,13 @@ class VotersController < ApplicationController
 
   def edit
     @voter = Voter.find(params[:id])
+    @relevant_visits = Visit.where(voter_id: @voter.id)
+    @visit = Visit.new
   end
 
   def update
     voter = Voter.find(params[:id])
+    @relevant_visits = Visit.where(voter_id: @voter.id)
     voter.update voter_params
     redirect_to voter_path(voter)
   end
@@ -28,20 +30,8 @@ class VotersController < ApplicationController
 
   def voter_params
      params.require(:voter).permit(
-      # :f_name
-      # :l_name
       :email,
       :phone_number
-      # :apt_number
-      # :latitude
-      # :longitude
-      # :zip_code, :default => 33460
-      # :party
-      # :birthdate
-      # :race
-      # :gender
-      # :reg_date
-      # :last_vote_date
       )
   end
 

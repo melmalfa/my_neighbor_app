@@ -1,14 +1,26 @@
 class VisitsController < ApplicationController
+
   def create
-    @visit = Visit.create(visit_params)
-    @visit.voter_id = params[:voter_id]
-    @visit.save
-    redirect_to voter_path(@visit.voter_id)
+    voter = Voter.find params[:voter_id]
+
+    visit = Visit.new(visit_params)
+    visit.user  = current_user
+    visit.voter = voter
+
+    if visit.save
+      redirect_to voter_path(voter)
+    else
+      redirect_to edit_voter_path(voter)
+    end
   end
 
   private
 
   def visit_params
+    params.require(:visit).permit(
+      :notes,
+      :vote_decision
+    )
   end
 
 end

@@ -24,24 +24,39 @@
 <div class="canvass">Status of Canvassing:
   <ul>
     <li>Canvassed Yet?:<%= @voter.uncanvassed %></li>
-   <li>Decision: <%= @voter.decision %></li>
+
   </ul>
 </div>
 
 <div class="contact">Contact Information:
   <ul>
     <li>E-Mail:<%= @voter.email %></li>
+    <!-- add button that can update email -->
    <li>Phone: <%= @voter.phone_number %></li>
+   <!-- add button that can update phone number -->
   </ul>
 </div>
 
+<div class="visit">
+    <p>My Visits: </p>
+      <% @relevant_visits.each do |visit| %>
+        <ul>
+          <li>Date: <%= visit.created_at %><li>
+          <!-- how to put campaign name in here? -->
+          <li>Decision for <%= visit.vote_decision %></li>
+          <li>Notes: <%= visit.notes %></li>
+          <li>Visit by: <%= visit.user_id %></li>
+        </ul>
+        <% end %>
+  </div>
+
 <!-- <div class="street_map"> -->
-  <div class="embed-responsive embed-responsive-16by9">
+<!--   <div class="embed-responsive embed-responsive-16by9">
     <iframe class="embed-responsive-item"
     src="https://www.google.com/maps/embed/v1/streetview
-    ?key=<%= ENV['GOOGLE_API_KEY'] %>&location=<%= @voter.latitude %>,<%= @voter.longitude %>&heading=210&pitch=10&fov=35&output=embed"
+    ?key=<#%= ENV['GOOGLE_API_KEY'] %>&location=<#%= @voter.latitude %>,<#%= @voter.longitude %>&heading=210&pitch=10&fov=35&output=embed">
     </iframe>
-  </div>
+  </div> -->
 <!-- </div> -->
 
 <%= link_to "Edit Voter Information", edit_voter_path(@voter) %>

@@ -19,7 +19,6 @@ class CreateVoters < ActiveRecord::Migration
       t.date :reg_date
       t.date :last_vote_date
       t.boolean :uncanvassed, :default => false
-      t.string :decision
     end
   end
 end
