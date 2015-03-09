@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
   resources :users, only: [:show, :edit, :update]
-  get 'users/:id/canvass' => 'users#canvass'
   resources :campaigns, only: [:index, :show]
   resources :voters, only: [:index, :show, :edit, :update] do
     resources :visits, only: [:create]

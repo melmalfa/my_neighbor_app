@@ -1,8 +1,12 @@
 class Voter < ActiveRecord::Base
   has_many :visits
 
-  attr_accessible :street_address, :latitude, :longitude
-  geocoded_by :street_address
+  # def make_addy
+  #   @voter=Voter.find(params[:id])
+  # end
+
+  attr_accessor :street_address, :latitude, :longitude
+  geocoded_by @voter_addy
   after_validation :geocode
 
   # def determine_age(dob)

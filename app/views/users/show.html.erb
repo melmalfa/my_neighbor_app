@@ -1,7 +1,10 @@
 <h1><%= @user.f_name %>'s Neighbors</h1>
 
+<h2>Current Campaign:</h2>
+<p>Re-Elect Christopher McVoy 2015</p>
 
-
+<h2>Ready To Canvass?</h2>
+<p><%= link_to "My Neighbors", voters_path %></p>
 
 
 
@@ -19,3 +22,5 @@
       <li>Zip Code: <%= @user.zip_code %></li>
     </ul>
 </div>
+
+<p class="link"><%= link_to "Edit My Info", edit_user_path(@user) %></p>
