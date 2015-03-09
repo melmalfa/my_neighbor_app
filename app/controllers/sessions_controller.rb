@@ -11,10 +11,11 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       # store their id in session
       session[:user_id] = user.id
-      redirect_to user_path
+      redirect_to user_path(user)
       # redirect_to "/user/"+session[:user_id]+"/canvass"
       # user_path(canvass)
     else
+      #create an error message
       # rerender the form
       render :new
     end

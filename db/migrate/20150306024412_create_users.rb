@@ -7,6 +7,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :phone_number
       t.string :street_address
       t.string :apt_number
+      t.float :latitude
+      t.float :longitude
       # do i need zip, if can auto calculate this by the street address?
       t.integer :zip_code, :default => 33460
       t.string :password_digest
