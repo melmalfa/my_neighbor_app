@@ -1,9 +1,11 @@
 class User < ActiveRecord::Base
-  # we get this method from bcrypt
-  # and need to create a password_digest column
   has_secure_password
   has_many :visits
   has_many :voters, through: :visits
+
+  attr_accessible :street_address, :latitude, :longitude
+  geocoded_by :street_address
+  after_validation :geocode
 end
 
 

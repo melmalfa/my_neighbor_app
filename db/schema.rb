@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20150306214314) do
     t.string  "phone_number"
     t.string  "street_address"
     t.string  "apt_number"
+    t.float   "latitude"
+    t.float   "longitude"
     t.integer "zip_code",        default: 33460
     t.string  "password_digest"
   end
@@ -55,6 +57,8 @@ ActiveRecord::Schema.define(version: 20150306214314) do
     t.string  "phone_number"
     t.string  "street_address"
     t.string  "apt_number"
+    t.float   "latitude"
+    t.float   "longitude"
     t.integer "zip_code",       default: 33460
     t.string  "party"
     t.date    "birthdate"

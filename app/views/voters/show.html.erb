@@ -32,6 +32,19 @@
   </ul>
 </div>
 
+<div class="street_map">
+  <iframe
+  width="450"
+  height="250"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/streetview
+  ?key=<%= ENV['GOOGLE_API_KEY'] %>&location=<%= @voter.latitude %>,<%= @voter.longitude %>
+  &heading=210
+  &pitch=10
+  &fov=35"
+  </iframe>
+</div>
+
 <%= link_to "Edit Voter Information", edit_voter_path(@voter) %>
 
 <%= link_to "Voter Index", voters_path %>
