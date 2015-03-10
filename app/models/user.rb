@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   has_many :voters, through: :visits
 
   geocoded_by :address
-  after_validation :geocode
+  # after_validation :geocode
+  after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
 
   def address
     "#{street_address}, #{zip_code}"
