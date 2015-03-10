@@ -9,6 +9,7 @@ Melodie Malfa
 Gems Used:
 * Geocoder
 * Bcrypt
+* ffaker
 
 Database Used:
 * Postgresql
