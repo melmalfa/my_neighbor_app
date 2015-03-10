@@ -1,7 +1,7 @@
 <h1><%= @user.f_name %>'s Neighbors</h1>
 
 <h2>Current Campaign:</h2>
-<p>Re-Elect Christopher McVoy 2015</p>
+<p class="centered">Re-Elect Christopher McVoy 2015</p>
 
 <h2>Ready To Canvass?</h2>
 <p><%= link_to "My Neighbors", voters_path %></p>
@@ -10,7 +10,7 @@
 
 
 
-<div class="user_contact">
+<div class="user_contact centered">
   <p>My Personal Information:</p>
     <ul>
       <li>First Name: <%= @user.f_name %></li>
@@ -23,4 +23,4 @@
     </ul>
 </div>
 
-<p class="link"><%= link_to "Edit My Info", edit_user_path(@user) %></p>
+<p class="link centered"><%= link_to "Edit My Info", edit_user_path(@user) %></p>

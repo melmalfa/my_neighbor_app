@@ -1,3 +1,24 @@
-
-<p class="link">
+<div class="user_contact centered">
+  <h1>My Personal Information:</h1>
+  <ul>
+      <%= form_for @user do |f| %>
+        <li><%= f.label :f_name, 'First Name' %></li>
+        <li><%= f.text_field :f_name %></li>
+        <li><%= f.label :l_name, 'Last Name' %></li>
+        <li><%= f.text_field :l_name %></li>
+        <li><%= f.label :email, 'E-Mail Address' %></li>
+        <li><%= f.text_field :email %></li>
+        <li><%= f.label :phone_number, 'Phone Number' %></li>
+        <li><%= f.text_field :phone_number %></li>
+        <li><%= f.label :street_address, 'Street Address' %></li>
+        <li><%= f.text_field :street_address %></li>
+        <li><%= f.label :apt_number, 'Apartment Number' %></li>
+        <li><%= f.text_field :apt_number %></li>
+        <li><%= f.label :zip_code, 'Zip Code' %></li>
+        <li><%= f.text_field :zip_code %></li>
+        <li><%= f.submit 'Update Contact Info' %></li>
+      <% end %>
+    </ul>
+</div>
+<p class="link centered">
 <%= link_to "Back To My Page", user_path(@user) %></p>
