@@ -3,7 +3,7 @@ class VotersController < ApplicationController
   def index
     @voters = Voter.all
     @user = current_user
-    @local_voters = @user.voters_within_km(2)
+    @local_voters = @user.voters_within_km(1)
   end
 
   def show

@@ -3,7 +3,7 @@
 <h1><%= @voter.street_address %> <%= @voter.apt_number %> <%= @voter.zip_code %></h1>
 </div>
 
-<div class="basic">
+<div class="basic centered">
   <ul>
     <li>First Name: <%= @voter.f_name %></li>
     <li>Last Name: <%= @voter.l_name %></li>
@@ -21,16 +21,18 @@
   </ul>
 </div>
 
-<div class="canvass">Status of Canvassing:
+<div class="canvass centered">
+  <h3>Status of Canvassing:</h3>
   <ul>
-    <li>Canvassed Yet?:<%= @voter.uncanvassed %></li>
+    <li>Canvassed Yet?: <%= @voter.uncanvassed %></li>
 
   </ul>
 </div>
 
-<div class="contact">Contact Information:
+<div class="contact centered">
+  <h3>Contact Information:</h3>
   <ul>
-    <li>E-Mail:<%= @voter.email %></li>
+    <li>E-Mail: <%= @voter.email %></li>
     <!-- add button that can update email -->
    <li>Phone: <%= @voter.phone_number %></li>
    <!-- add button that can update phone number -->
@@ -38,7 +40,7 @@
 </div>
 
 <div class="visit">
-    <p>My Visits: </p>
+    <h3>My Visits: </h3>
       <% @relevant_visits.each do |visit| %>
         <ul>
           <li>Date: <%= visit.created_at %><li>

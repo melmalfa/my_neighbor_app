@@ -1,28 +1,13 @@
-== README
+My Neighborhood App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This App is designed to help facilitate community organizing within one's immediate neighborhood. Local grassroots political campaigns- often centered around elections- utilize government-issued voting lists which are released yearly as giant Excel spreadsheets. Volunteers canvass voters door-to-door; this is the most important tool of all local grassroots campaigns: directly interacting with voters, who are essentially one's community members and neighbors. In many local communities, such as mine in Lake Worth, FL, the same people canvass year after year. This presents an opportunity for localized community building on a very local scale. This app is designed to allow a use (a campaign volunteer) to canvass based on voters who closest in vicinity to them- essentially mapping out one's neighorhood, keeping track of notes to utilize year after year, and canvassing on-the-fly based on location rather than waiting to receive voting lists and walk for hours on a weekend. This App is meant to empower citizens while also making the canvassing process easier to use- updating voter info as one goes door-to-door, rather than waiting to be manually entered later on.
 
-Things you may want to cover:
+Melodie Malfa
 
-* Ruby version
+Gems Used:
+Geocoder
+Bcrypt
 
-* System dependencies
+Database Used:
+Postgresql
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

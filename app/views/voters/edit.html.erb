@@ -9,22 +9,26 @@
   </ul>
 </div>
 
+<ul>
 <%= form_for @voter do |f| %>
-  <%= f.label :email, 'E-Mail' %>
-  <%= f.text_field :email %>
-  <%= f.label :phone_number, 'Phone Number' %>
-  <%= f.text_field :phone_number %>
-  <%= f.submit 'Update Voter Contact Info' %>
+  <li><%= f.label :email, 'E-Mail' %></li>
+  <li><%= f.text_field :email %></li>
+  <li><%= f.label :phone_number, 'Phone Number' %></li>
+  <li><%= f.text_field :phone_number %></li>
+  <li><%= f.submit 'Update Voter Contact Info' %></li>
 <% end %>
+</ul>
 
 <!-- make notes field very big and make vote decision a checkbox with three choices -->
+<ul>
 <%= form_for [@voter, @visit] do |f| %>
-  <%= f.label :vote_decision, 'Vote Decision'%>
-  <%= f.text_field :vote_decision %>
-  <%= f.label :notes, 'Notes' %>
-  <%= f.text_field :notes, :size => 80 %>
-  <%= f.submit 'Submit Visit Info' %>
+  <li><%= f.label :vote_decision, 'Vote Decision'%></li>
+  <li><%= f.text_field :vote_decision %></li>
+  <li><%= f.label :notes, 'Notes' %></li>
+  <li><%= f.text_field :notes, :size => 80 %></li>
+  <li><%= f.submit 'Submit Visit Info' %></li>
 <% end %>
+</ul>
 
 
 
