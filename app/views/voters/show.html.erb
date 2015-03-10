@@ -13,7 +13,7 @@
     <li>Race: <%= @voter.race %></li>
     <li>Party Affiliation: <%= @voter.party %></li>
     <!-- this needs to be a function to automate the district -->
-    <li>Precint: </li>
+<!--     <li>Precint: </li> -->
     <li>Date <%= @voter.f_name %> registered to vote: <%= @voter.reg_date %></li>
     <li>Date that <%= @voter.f_name %> last voted: <%= @voter.last_vote_date %></li>
     <!-- change this one -->
@@ -61,9 +61,13 @@
   </div> -->
 <!-- </div> -->
 
+<p class="centered">
 <%= link_to "Edit Voter Information", edit_voter_path(@voter) %>
 
 <%= link_to "Voter Index", voters_path %>
+
+<%= link_to "My Page", user_path(current_user) %>
+</p>
 
 <!-- iterate through the visits to check for visits with voter_id that matched this voter. then check if decided and if so, render decided -->
 
