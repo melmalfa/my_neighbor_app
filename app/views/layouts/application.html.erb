@@ -5,16 +5,21 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Philosopher|Calligraffitti|Cinzel+Decorative:700|Vidaloka' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <header>
-    <h1>Canvassing My Neighbors</h1>
+    <h1 class="title">My Neighborhood</h1>
+    <h4 class="slogan">A Grassroots Tool For Community Organizing</h4>
   </header>
+  <div class="wrapper">
 
 <%= yield %>
 
-
+  </div>
+<footer><h5>A future open-source project by Melodie Malfa, 2015</h5></footer>
 </body>
 </html>
+
 
 

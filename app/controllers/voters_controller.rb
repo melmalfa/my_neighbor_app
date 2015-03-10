@@ -2,6 +2,8 @@ class VotersController < ApplicationController
 
   def index
     @voters = Voter.all
+    @user = current_user
+    @local_voters = voters_within_km(2)
   end
 
   def show
@@ -21,7 +23,7 @@ class VotersController < ApplicationController
 
   def update
     voter = Voter.find(params[:id])
-    @relevant_visits = Visit.where(voter_id: @voter.id)
+    relevant_visits = Visit.where(voter_id: @voter.id)
     voter.update voter_params
     redirect_to voter_path(voter)
   end
@@ -34,9 +36,6 @@ class VotersController < ApplicationController
       :phone_number
       )
   end
-
-
-
 
 end
 

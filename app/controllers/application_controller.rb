@@ -17,4 +17,19 @@ class ApplicationController < ActionController::Base
   def authorize
     redirect_to '/login' unless current_user
   end
+
+  # geocoded_by :address
+  # after_validation :geocode
+
+  # def address
+  #   "#{street_address}, #{zip_code}"
+  # end
+
+  def voters_within_km(distance)
+    Voter.all.select do |voter|
+      # voter.latitude.present? && voter.longitude.present? && (distance_to(voter) <= distance)
+      voter.latitude.present? && voter.longitude.present? && (distance_to(current_user) <= distance)
+    end
+  end
+
 end
