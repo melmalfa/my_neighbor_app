@@ -18,9 +18,6 @@ class ApplicationController < ActionController::Base
     redirect_to '/login' unless current_user
   end
 
-  # geocoded_by :address
-  # after_validation :geocode
-
   # def address
   #   "#{street_address}, #{zip_code}"
   # end

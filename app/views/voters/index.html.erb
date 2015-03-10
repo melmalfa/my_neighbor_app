@@ -1,7 +1,7 @@
 <h1>Voters</h1>
 
 <ul>
-<% @voters.each do |voter| %>
+<% @local_voters.each do |voter| %>
   <li><a href="/voters/<%= voter.id %>"><%= voter.street_address %> <%= voter.apt_number %></li>
 <% end %>
 </ul>

@@ -12,8 +12,9 @@ class User < ActiveRecord::Base
 
   def voters_within_km(distance)
     Voter.all.select do |voter|
-      # voter.latitude.present? && voter.longitude.present? && (distance_to(voter) <= distance)
-      voter.latitude.present? && voter.longitude.present? && (distance_to(user) <= distance)
+      # distance_to calculates the distance from user to voter
+      voter.latitude.present? && voter.longitude.present? && (self.distance_to(voter) <= distance)
+      # voter.latitude.present? && voter.longitude.present? && (distance_to(self) <= distance)
     end
   end
 end
