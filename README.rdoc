@@ -14,5 +14,7 @@ Gems Used:
 Database Used:
 * Postgresql
 
+https://trello.com/b/Q2kLdQCX/final-project
+
 
 
