@@ -51,6 +51,11 @@ a:link  {
   text-decoration:none;
   text-color: midnightblue;
 }
+
+label {
+  font-weight: bold;
+}
+
 /*
 a:link .footer  {
 

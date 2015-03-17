@@ -17,7 +17,7 @@ Database Used:
 * Postgresql
 
 Heroku Link:
-https://boiling-ocean-1673.herokuapp.com/
+https://my-neighborhood-app.herokuapp.com/
 
 Trello Board:
 https://trello.com/b/Q2kLdQCX/final-project

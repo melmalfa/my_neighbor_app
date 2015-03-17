@@ -1,12 +1,13 @@
-<h1>Voters</h1>
+<h1>Voters In My Neighborhood</h1>
 
+<h2>Voters Left To Canvass</h2>
 <ul>
 <% @local_voters.each do |voter| %>
   <li><a href="/voters/<%= voter.id %>"><%= voter.street_address %> <%= voter.apt_number %></li>
 <% end %>
 </ul>
 
-<div>
+<div class="foot">
 <p class="foot">
   <br>
   <br>
