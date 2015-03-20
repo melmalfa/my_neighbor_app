@@ -6,10 +6,6 @@
 <h3>Ready To Canvass?</h3>
 <p><%= link_to "My Neighbors", voters_path %></p>
 
-
-
-
-
 <div class="user_contact centered">
   <h3>My Personal Information:</h3>
     <ul>
@@ -18,9 +14,10 @@
       <li>E-Mail: <%= @user.email %></li>
       <li>Phone Number: <%= @user.phone_number %></li>
       <li>Street Address: <%= @user.street_address %></li>
-      <li>Apt. Number: <%= @user.apt_number %></li>
+      <!-- <li>Apt. Number: <#%= @user.apt_number %></li> -->
       <li>Zip Code: <%= @user.zip_code %></li>
     </ul>
 </div>
 
-<p class="foot"><%= link_to "Edit My Info", edit_user_path(@user) %></p>
+<div class="foot">
+<p><%= link_to "Edit My Info", edit_user_path(@user) %></p></div>

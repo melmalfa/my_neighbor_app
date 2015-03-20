@@ -12,13 +12,14 @@
         <li><%= f.text_field :phone_number %></li>
         <li><%= f.label :street_address, 'Street Address' %></li>
         <li><%= f.text_field :street_address %></li>
-        <li><%= f.label :apt_number, 'Apartment Number' %></li>
-        <li><%= f.text_field :apt_number %></li>
+        <!-- <li><#%= f.label :apt_number, 'Apartment Number' %></li>
+        <li><#%= f.text_field :apt_number %></li> -->
         <li><%= f.label :zip_code, 'Zip Code' %></li>
         <li><%= f.text_field :zip_code %></li>
         <li><%= f.submit 'Update Contact Info' %></li>
       <% end %>
     </ul>
 </div>
-<p class="foot">
-<%= link_to "Back To My Page", user_path(@user) %></p>
+
+<div class="foot">
+<p><%= link_to "Back To My Page", user_path(@user) %></p></div>

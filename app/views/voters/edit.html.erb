@@ -19,7 +19,6 @@
 <% end %>
 </ul>
 
-<!-- make notes field very big and make vote decision a checkbox with three choices -->
 <ul>
 <%= form_for [@voter, @visit] do |f| %>
   <li><%= f.label :vote_decision, 'Vote Decision'%></li>
@@ -30,11 +29,10 @@
 <% end %>
 </ul>
 
-
-<p class="foot">
+<div class="foot"><p>
 <%= link_to "Voter Information", voter_path(@voter) %>
 
 <%= link_to "Voter Index", voters_path %>
 
 <%= link_to "My Page", user_path(current_user) %>
-</p>
+</p></div>
