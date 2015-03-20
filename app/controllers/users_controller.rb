@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :authorize, except: [:create, :new]
 
+  def index
+    @users = Users.all
+  end
+
   def show
     @user = User.find(params[:id])
   end
