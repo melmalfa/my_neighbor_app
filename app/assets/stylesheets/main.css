@@ -49,15 +49,11 @@ li  {
 
 a:link  {
   text-decoration:none;
-  text-color: midnightblue;
+  color: midnightblue;
 }
 
 label {
-  font-weight: bold;
+  font-weight: 600;
+  color: purple;
 }
 
-/*
-a:link .footer  {
-
-}
-*/
